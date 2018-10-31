@@ -1,0 +1,77 @@
+/*random default mixins for now*/
+/* Standard layout and styling */
+/* Animations */
+/* Filters */
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");
+body {
+  margin: 0;
+  font-family: Roboto, sans serif; }
+  body .main-body {
+    color: #444444; }
+    body .main-body .first-section {
+      background-color: #FFE4A0;
+      padding: 20px 10px 20px 10px;
+      text-align: center; }
+      body .main-body .first-section header {
+        color: #af5340;
+        display: inline-block;
+        margin-bottom: 30px; }
+        body .main-body .first-section header figure {
+          background-image: url(../assets/logo.png);
+          background-size: cover;
+          display: inline-block;
+          height: 35px;
+          margin: 0;
+          width: 35px;
+          vertical-align: bottom; }
+        body .main-body .first-section header h1 {
+          display: inline-block;
+          font-size: 30px;
+          line-height: 1em;
+          margin: 0;
+          text-transform: uppercase; }
+      body .main-body .first-section h3 {
+        font-size: 60px;
+        font-weight: 300;
+        line-height: 60px;
+        margin: 0;
+        letter-spacing: 5px;
+        text-transform: uppercase; }
+      body .main-body .first-section p {
+        margin-top: 30px; }
+    body .main-body .second-section {
+      text-align: center;
+      padding: 20px 10px 20px 10px; }
+      body .main-body .second-section h2 {
+        font-size: 30px;
+        font-weight: 400; }
+      body .main-body .second-section p {
+        font-size: 15px; }
+      body .main-body .second-section .intros {
+        margin-top: 30px;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        justify-content: center;
+        -ms-flex-pack: center; }
+        body .main-body .second-section .intros figure {
+          background-position: 50% 50%;
+          height: 150px;
+          -o-background-size: cover;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          background-size: cover;
+          width: 150px; }
+        body .main-body .second-section .intros h4 {
+          font-weight: 400; }
+        body .main-body .second-section .intros .first-intro figure {
+          background-image: url(../assets/luke.jpeg); }
+        body .main-body .second-section .intros .second-intro figure {
+          background-image: url(../assets/tyler.jpg); }
+        body .main-body .second-section .intros .third-intro figure {
+          background-image: url(../assets/camilla.jpg); }
