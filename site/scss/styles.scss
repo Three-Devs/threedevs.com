@@ -73,10 +73,12 @@ body {
 			.intros {
 				margin-top:30px;
 				@include flexbox;
+				@include flex-wrap(wrap);
 				@include justify-content(center);
 
 				figure {
 					background-position: 50% 50%;
+					display:inline-block;
 					height:150px;
 					@include background-size(cover);
 					width:150px;

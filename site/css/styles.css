@@ -54,6 +54,10 @@ body {
         display: -ms-flexbox;
         display: -webkit-flex;
         display: flex;
+        -webkit-flex-wrap: wrap;
+        -moz-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
         -webkit-justify-content: center;
         -moz-justify-content: center;
         -ms-justify-content: center;
@@ -61,6 +65,7 @@ body {
         -ms-flex-pack: center; }
         body .main-body .second-section .intros figure {
           background-position: 50% 50%;
+          display: inline-block;
           height: 150px;
           -o-background-size: cover;
           -webkit-background-size: cover;
