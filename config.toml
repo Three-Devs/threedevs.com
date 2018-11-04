@@ -2,7 +2,7 @@ baseURL = "https://www.threedevs.com/"
 languageCode = "en-us"
 title = "Three Devs"
 
-copyright = "Copyright (c) 2018, Three Devs; all rights reserved."
+copyright = "Copyright, Three Devs; all rights reserved."
 canonifyurls = true
 paginate = 3
 theme = "hugo-bootstrap"
