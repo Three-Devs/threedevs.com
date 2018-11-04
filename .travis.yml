@@ -4,6 +4,7 @@ install:
 - go get -v github.com/spf13/hugo
 script:
 - hugo version
+- make build
 - if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then make deploy; fi
 branches:
   only:
