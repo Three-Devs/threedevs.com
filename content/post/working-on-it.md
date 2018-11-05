@@ -11,8 +11,6 @@ date: 2018-11-03T22:25:46-05:00
 
 I swear, we're working on it.
 
-------
-
 ## This is us
 
 We all had to start out, once; we need to remain empathetic and kind to those who come after us.
