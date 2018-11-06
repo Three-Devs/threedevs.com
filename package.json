@@ -1,0 +1,23 @@
+{
+  "name": "threedevs.com",
+  "version": "1.0.0",
+  "description": "\"\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Three-Devs/threedevs.com.git"
+  },
+  "author": "Camilla Coronado",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Three-Devs/threedevs.com/issues"
+  },
+  "homepage": "https://github.com/Three-Devs/threedevs.com#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.2"
+  }
+}
