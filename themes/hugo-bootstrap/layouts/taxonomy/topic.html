@@ -3,7 +3,7 @@
   <header class="container">
     {{ partial "content/h1-title" . }}
   </header>
-  {{ range $index, $page := .Paginator.Pages }}
+  {{ range $index, $foo := .Paginator.Pages }}
     {{ .Render "summary" }}
   {{ end }}
   {{ partial "content/pagination" . }}
