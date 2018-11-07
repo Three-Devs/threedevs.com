@@ -1,23 +1,40 @@
 {
   "name": "threedevs.com",
   "version": "1.0.0",
-  "description": "\"\"",
-  "main": "index.js",
+  "description": "Three Devs - How we learned and are learning to develop for the internet.",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack --mode development",
+    "prod": "webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack && hugo server --theme=hugo-bootstrap -d site --buildDrafts --gc --cleanDestinationDir",
+    "build": "webpack --mode production && hugo --theme=hugo-bootstrap -d site --gc --cleanDestinationDir"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Three-Devs/threedevs.com.git"
   },
-  "author": "Camilla Coronado",
-  "license": "ISC",
+  "author": "Luke Rebarchik, Camilla Coronado, & Tyler Winzenried",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Three-Devs/threedevs.com/issues"
   },
-  "homepage": "https://github.com/Three-Devs/threedevs.com#readme",
+  "homepage": "https://threedevs.com",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-sass": "^4.0.2"
-  }
+    "@babel/core": "^7.1.2",
+    "babel-loader": "^8.0.4",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^1.0.1",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.4",
+    "node-sass": "^4.10.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-md5-hash": "0.0.6"
+  },
+  "dependencies": {}
 }

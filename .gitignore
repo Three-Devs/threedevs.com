@@ -1,3 +1,14 @@
+# Always ignore these OS files
+.DS_Store
+Thumbs_db
+desktop.ini
+
+# NPM/Webpack built versions of files
+static/assets/
+
+# Temporary files
+temp/
+
 # Logs
 logs
 *.log
