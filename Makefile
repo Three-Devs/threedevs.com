@@ -1,8 +1,9 @@
 build:
+	set -e
 	npm i
 	npm run build --colors
 	wget https://github.com/gohugoio/hugo/releases/download/v0.51/hugo_0.51_Linux-64bit.tar.gz
-	tar -xvzf hugo_0.51_Linux-64bit.tar.gz ./hugo
+	tar -xvzf hugo_0.51_Linux-64bit.tar.gz hugo
 	./hugo version
 	./hugo -d site --gc --cleanDestinationDir
 
