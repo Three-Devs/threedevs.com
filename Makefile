@@ -1,8 +1,8 @@
 build:
 	set -e
 	npm i
-	node_modules/.bin/hugo -h
-	npx hugo-cli version
+	node_modules/.bin/hugo check
+	npm run hugo-cli version
 	npm run build --colors
 
 deploy: build
