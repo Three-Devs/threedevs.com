@@ -9,9 +9,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
 
   {{ range .Site.Data.manifest }}{{ $i := .}}{{ $file := $i | printf "assets/%s" }}
-  {{- if (in $i ".bundle.css.gz") and (fileExists $file) -}}<link rel="stylesheet" href="{{ $file | relURL }}" />
+  {{- if (in $i ".bundle.css") and (fileExists $file) -}}<link rel="stylesheet" href="{{ $file | relURL }}" />
   {{end -}}
-  {{- if (in $i ".bundle.js.gz") and (fileExists $file) -}}<script src="{{ $file | relURL }}"></script>
+  {{- if (in $i ".bundle.js") and (fileExists $file) -}}<script src="{{ $file | relURL }}"></script>
   {{end -}}
   {{- end -}}
   <link rel="stylesheet" href="{{ "assets/css/tomorrow-night.css" | relURL }}">
@@ -19,5 +19,5 @@
   {{ partial "base/favicon" . }}
   
 </head>
-<body class="bg-light">
+<body class="bg-light main-body">
   {{ partial "base/header" . }}
