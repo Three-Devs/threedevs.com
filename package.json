@@ -4,7 +4,7 @@
   "description": "Three Devs - How we learned and are learning to develop for the internet.",
   "main": "index.html",
   "scripts": {
-    "watch": "webpack --watch --watch-poll",
+    "watch": "concurrently --kill-others \"webpack --watch --watch-poll\" \"hugo server -D\"",
     "dev": "concurrently --prefix '{time}-{pid}' 'npm run watch' 'npm run hugo' --kill-others --kill-others-on-fail",
     "prod": "echo 'Not yet implemented'",
     "build": "webpack && hugo version && hugo -d site --cleanDestinationDir",
