@@ -135,7 +135,7 @@ module.exports = (env, argv) => {
       }),
       new WebpackMd5Hash(),
       new ManifestPlugin({
-        fileName: "../data/manifest.json",
+        fileName: "../../data/manifest.json",
       }),
       new CompressionPlugin({
         test: /\.(js|css)/,

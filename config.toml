@@ -32,13 +32,6 @@ googleAnalytics = "UA-128626176-1"
     identifier = "categories"
     url = "/categories/"
 
-[[menu.main]]
-    name = "ABOUT ME"
-    pre = "<i class='fa fa-info-circle'></i>"
-    weight = -90
-    identifier = "about-me"
-    url = "/page/about-me"
-
 [[menu.footer]]
     name = "DISCLAIMER"
     weight = -110
