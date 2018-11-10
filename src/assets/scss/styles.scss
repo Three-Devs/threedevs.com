@@ -6,15 +6,15 @@ body {
 	margin: 0;
 	font-family: $primary-font;
 
-	&.main-body {
-
+	&.main-body, & .main-body {
 		color: $charcoal;
+
 		.first-section {
 			background-color:$cream-brulee;
-			padding: 0 10px 15px 10px;
+			padding: 20px 10px 20px 10px;
 			margin: 0 0 2em 0;
 			text-align:center;
-			color: $tuscany;
+			color: $charcoal;
 
 			header, .header {
 				color: $tuscany;
@@ -40,6 +40,13 @@ body {
 					margin:0;
 					text-transform: uppercase;
 					
+					a {
+						font-size: 30px;
+						
+						&:link, & {
+							color: $tuscany;
+						}
+					}
 				}
 
 			}
@@ -51,13 +58,18 @@ body {
 				margin:0;
 				letter-spacing:5px;
 				text-transform: uppercase;
-
 			}
 
 			p {
 				margin-top:30px;
 			}
 
+			nav, .navbar {
+				display: inline-block;
+				width: 20vw;
+				position: absolute;
+				top: 0;
+			}
 		}
 
 		.second-section {

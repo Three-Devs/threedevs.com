@@ -7,8 +7,8 @@ body {
 	font-family: $primary-font;
 
 	.main-body {
-
 		color: $charcoal;
+
 		.first-section {
 			background-color:$cream-brulee;
 			padding: 20px 10px 20px 10px;
@@ -54,6 +54,13 @@ body {
 
 			p {
 				margin-top:30px;
+			}
+
+			nav, .navbar {
+				display:inline-block;
+				width:20vw;
+				position:absolute;
+				top:0;
 			}
 
 		}
