@@ -3,8 +3,6 @@ title: "Working on It"
 date: 2018-11-03T22:25:46-05:00
 ---
 
-# Three Devs
-
 ![Three Devs Logo](/assets/img/logo.png)
 
 ### Coming Soon
