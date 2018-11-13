@@ -3,73 +3,79 @@
 @import "mixins/vendor-prefix/flex.scss";
 
 body {
-	margin: 0;
+	margin: 0 0 3rem 0;
 	font-family: $primary-font;
+
+	& > * {
+		margin: 0 3rem;
+	}
 
 	&.main-body, & .main-body {
 		color: $charcoal;
 
 		.first-section {
+			box-sizing: border-box;
 			background-color:$cream-brulee;
 			padding: 20px 10px 20px 10px;
-			margin: 0 0 2em 0;
+			margin: 0;
 			text-align:center;
 			color: $charcoal;
+		}
 
-			header, .header {
-				color: $tuscany;
+		header, .header {
+			color: $tuscany;
+			display:inline-block;
+			margin-bottom:30px;
+			width: 100vw;
+
+			figure{
+				background-image: url(../img/logo.png);
+				background-size:cover;
 				display:inline-block;
-				margin-bottom:30px;
-
-				figure{
-					background-image: url(../img/logo.png);
-					background-size:cover;
-					display:inline-block;
-					height: 35px;
-					margin: 0;
-					width:35px;
-    				vertical-align: bottom;
+				height: 35px;
+				margin: 0;
+				width:35px;
+				vertical-align: bottom;
 
 
-				}
+			}
 
-				h1 {
-					display:inline-block;
+			h1 {
+				display:inline-block;
+				font-size: 30px;
+				line-height:1em;
+				margin:0;
+				text-transform: uppercase;
+				
+				a {
 					font-size: 30px;
-					line-height:1em;
-					margin:0;
-					text-transform: uppercase;
 					
-					a {
-						font-size: 30px;
-						
-						&:link, & {
-							color: $tuscany;
-						}
+					&:link, & {
+						color: $tuscany;
 					}
 				}
-
 			}
 
-			h3 {
-				font-size: 60px;
-				font-weight: 300;
-				line-height:60px;
-				margin:0;
-				letter-spacing:5px;
-				text-transform: uppercase;
-			}
+		}
 
-			p {
-				margin-top:30px;
-			}
+		h3 {
+			font-size: 60px;
+			font-weight: 300;
+			line-height:60px;
+			margin:0;
+			letter-spacing:5px;
+			text-transform: uppercase;
+		}
 
-			nav, .navbar {
-				display: inline-block;
-				width: 20vw;
-				position: absolute;
-				top: 0;
-			}
+		p {
+			margin-top:30px;
+		}
+
+		nav, .navbar {
+			display: inline-block;
+			width: 20vw;
+			position: absolute;
+			top: 0;
 		}
 
 		.second-section {
@@ -121,5 +127,15 @@ body {
 				}
 			}
 		}
+	}
+
+	footer {
+		position: fixed;
+		bottom: 0;
+		min-height:4rem;
+		width: 100vw;
+		margin: 0;
+		padding: 1.25rem 3rem;
+		background-color:$cream-brulee;
 	}
 }
