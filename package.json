@@ -4,12 +4,13 @@
   "description": "Three Devs - How we learned and are learning to develop for the internet.",
   "main": "index.html",
   "scripts": {
-    "watch": "concurrently --kill-others \"webpack --watch --watch-poll\" \"hugo server -D\"",
-    "dev": "concurrently --prefix '{time}-{pid}' 'npm run watch' 'npm run hugo' --kill-others --kill-others-on-fail",
+    "postinstall": "hugo-installer --version 0.51 --destination node_modules/.bin/hugo-bin",
+    "watch": "concurrently --kill-others \"webpack --watch --watch-poll\" \"npm run hugo\"",
+    "dev": "concurrently --prefix '{time}-{pid}' 'npm run watch' 'node_modules/.bin/hugo-bin/hugo' --kill-others --kill-others-on-fail",
     "prod": "echo 'Not yet implemented'",
-    "build": "webpack && hugo version && hugo -d site -t three-devs-theme --cleanDestinationDir",
+    "build": "webpack && node_modules/.bin/hugo-bin/hugo version && node_modules/.bin/hugo-bin/hugo -d site -t three-devs-theme --cleanDestinationDir",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "hugo": "hugo server -D"
+    "hugo": "node_modules/.bin/hugo-bin/hugo server -D"
   },
   "repository": {
     "type": "git",
@@ -37,6 +38,7 @@
     "cssnano": "^3.10.0",
     "file-loader": "^1.1.11",
     "hugo-cli": "^0.8.0",
+    "hugo-installer": "^1.0.1",
     "katex": "^0.10.0-alpha",
     "lost": "^8.2.1",
     "mini-css-extract-plugin": "^0.4.4",
@@ -52,7 +54,7 @@
     "toml": "^2.3.3",
     "uglifyjs-webpack-plugin": "^1.2.5",
     "url-loader": "^1.1.2",
-    "webpack": "^4.11.0",
+    "webpack": "^4.25.1",
     "webpack-cli": "^3.0.2",
     "webpack-dev-server": "^3.1.4",
     "webpack-manifest-plugin": "^2.0.3",
