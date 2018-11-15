@@ -1,10 +1,9 @@
 ---
 type: "article"
-layout: "summary"
 draft: true
-author: "author"
-description: "description"
+author: "Three Devs"
+description: "Development article"
 keywords: ["key", "words"]
-topics: ["topic 1"]
-tags: ["one", "two"]
+topics: ["how-to"]
+tags: ["web development"]
 ---
