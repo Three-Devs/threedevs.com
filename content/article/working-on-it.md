@@ -1,5 +1,6 @@
 ---
 title: "Working on It"
+type: article
 date: 2018-11-03T22:25:46-05:00
 ---
 
