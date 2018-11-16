@@ -37,7 +37,6 @@
     "css-loader": "^0.28.11",
     "cssnano": "^3.10.0",
     "file-loader": "^1.1.11",
-    "hugo-cli": "^0.8.0",
     "hugo-installer": "^1.0.1",
     "katex": "^0.10.0-alpha",
     "lost": "^8.2.1",
@@ -62,7 +61,5 @@
     "webpack-pwa-manifest": "^3.6.2",
     "workbox-webpack-plugin": "^3.2.0"
   },
-  "dependencies": {
-    "aerobatic-cli": "^1.1.4"
-  }
+  "dependencies": {}
 }
