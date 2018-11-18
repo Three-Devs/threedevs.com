@@ -110,20 +110,51 @@ body {
 
 				.first-intro {
 					figure {
-						background-image: url(../img/luke.jpeg);
+						background-image: url(../img/authors/luke-rebarchik.png);
 					}
 				}
 
 				.second-intro {
 					figure {
-						background-image: url(../img/tyler.jpg);
+						background-image: url(../img/authors/tyler.png);
 					}
 				}
 
 				.third-intro {
 					figure {
-						background-image: url(../img/camilla.jpg);
+						background-image: url(../img/authors/camilla.png);
 					}
+				}
+			}
+		}
+	}
+	max-width: 100vw;
+	section {
+		max-width: 100vw;
+
+		&.article-stripe {
+			max-width:200vw;
+			overflow: hidden;
+			overflow-x: scroll;
+			margin:0;
+			padding:0;
+			white-space: nowrap;
+
+			article {
+				display:inline-block;
+				vertical-align: text-top;
+				max-width: 20vw;
+				height: 15rem;
+				margin: .75vw 2.25vw;
+				padding: 1vw;
+				box-sizing: border-box;
+				white-space: normal;
+				font-size: 13pt;
+				background-color: $lily-white;
+				cursor: pointer;
+
+				p {
+					font-size: 12pt;
 				}
 			}
 		}

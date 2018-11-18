@@ -1,0 +1,14 @@
+<section class="article-stripe">
+    {{- range first 5 (where .Site.RegularPages "Type" "article") }}
+        <article>
+            <h1 class="item-title"><a href="{{ .RelPermalink }}" class="title">{{ .Title | markdownify}}</a></h1>
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format .Site.Data.Formats.date }}</time>
+            {{ with .Params.author -}}
+                {{ $.Site.Data.Strings.byauthor }} {{ . }}
+            {{- end -}}
+            {{ .ReadingTime }} {{ .Site.Data.Strings.metaReadinMinutes }}
+            {{ .WordCount }} {{ .Site.Data.Strings.words }}
+            <p>{{ .Render "summary" }}</p>
+        </article>
+    {{- end }}
+</section>

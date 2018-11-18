@@ -1,5 +1,6 @@
 <body class="bg-light main-body">
 {{ partial "base/header" . }}
+{{ partial "sections/article-stripe" . }}
 {{- range first 5 (where .Site.RegularPages "Type" "article") }}
 <article>
   <h1 class="item-title"><a href="{{ .RelPermalink }}" class="title">{{ .Title | markdownify}}</a></h1>
