@@ -1,0 +1,8 @@
+{{ with .Params.author }}
+    {{- $authorPic := . | anchorize | printf "assets/img/authors/%s.png" -}}
+    {{- $authorPicPath := $authorPic | printf "static/%s" -}}
+    <div class="author">
+        {{- if fileExists $authorPicPath }}<img src="{{ $authorPic | relURL }}" class="author-pic"/>{{ end -}}
+        {{- $.Site.Data.Strings.byauthor }} {{ . -}}
+    </div>
+{{ end }}

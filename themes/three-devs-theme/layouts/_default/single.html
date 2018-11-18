@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html class="no-js">
 {{ partial "base/head" . }}
-{{ .Content }}
-{{ partial "base/foot" . }}
-</html>
+<body class="bg-light main-body">
+    {{ partial "base/header" . }}
+    {{ partial "pieces/author" . }}
+    {{ .Content }}
+    {{ partial "base/footer" . }}
+    {{ partial "base/foot" . }}
+</body></html>
