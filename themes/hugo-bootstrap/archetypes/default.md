@@ -1,7 +1,7 @@
 ---
 type: "post"
 draft: true
-author: "author"
+author: ""author""
 description: "description"
 keywords: ["key", "words"]
 topics: ["topic 1"]

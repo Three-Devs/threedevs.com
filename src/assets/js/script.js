@@ -3,4 +3,5 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 import "../scss/styles.scss";
+import "../../../themes/three-devs-theme/static/scss/styles.scss";
 console.log("hello, world");

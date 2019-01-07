@@ -5,7 +5,7 @@ title = "Three Devs"
 copyright = "Copyright, Three Devs; all rights reserved."
 canonifyurls = true
 paginate = 3
-#theme = "three-devs-theme"
+theme = "three-devs-theme"
 
 #disqusShortname = "xxxxxx"
 googleAnalytics = "UA-128626176-1"
@@ -49,3 +49,5 @@ googleAnalytics = "UA-128626176-1"
   categories = true
   tags = true
   tag_cloud = true
+
+[authors]
