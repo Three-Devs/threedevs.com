@@ -4,11 +4,13 @@
   "description": "Three Devs - How we learned and are learning to develop for the internet.",
   "main": "index.html",
   "scripts": {
-    "watch": "concurrently --kill-others \"webpack --watch --watch-poll\" \"npm --version\"",
-    "dev": "concurrently --prefix '{time}-{pid}' 'npm run watch' --kill-others --kill-others-on-fail",
+    "postinstall": "hugo-installer --version 0.51 --destination node_modules/.bin/hugo-bin",
+    "watch": "concurrently --kill-others \"webpack --watch --watch-poll\" \"npm run hugo\"",
+    "dev": "concurrently --prefix '{time}-{pid}' 'npm run watch' 'node_modules/.bin/hugo-bin/hugo' --kill-others --kill-others-on-fail",
     "prod": "echo 'Not yet implemented'",
-    "build": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack && node_modules/.bin/hugo-bin/hugo version && node_modules/.bin/hugo-bin/hugo -d site -t three-devs-theme --cleanDestinationDir",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "hugo": "node_modules/.bin/hugo-bin/hugo server -D"
   },
   "repository": {
     "type": "git",
@@ -35,6 +37,7 @@
     "css-loader": "^0.28.11",
     "cssnano": "^3.10.0",
     "file-loader": "^1.1.11",
+    "hugo-installer": "^1.0.1",
     "katex": "^0.10.0-alpha",
     "lost": "^8.2.1",
     "mini-css-extract-plugin": "^0.4.4",
@@ -52,13 +55,16 @@
     "url-loader": "^1.1.2",
     "webpack": "^4.25.1",
     "webpack-cli": "^3.0.2",
-    "webpack-dev-server": "^3.1.4",
+    "webpack-dev-server": "^3.3.1",
     "webpack-manifest-plugin": "^2.0.3",
     "webpack-md5-hash": "0.0.6",
     "webpack-pwa-manifest": "^3.6.2",
     "workbox-webpack-plugin": "^3.2.0"
   },
   "dependencies": {
-    "foundation-sites": "^6.5.1"
+    "@hapi/boom": "^7.4.2",
+    "@hapi/hoek": "^6.2.1",
+    "cryptiles": "^4.1.3",
+    "tar": "^4.4.8"
   }
 }
