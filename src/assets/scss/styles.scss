@@ -2,6 +2,10 @@
 @import "variables/variables.scss";
 @import "mixins/vendor-prefix/flex.scss";
 
+//@import "../../../node_modules/foundation-sites/scss/settings/_settings.scss";
+//@import "../../../node_modules/foundation-sites/scss/foundation.scss";
+//@import "../../../node_modules/foundation-sites/dist/css/foundation.min.css";
+
 body {
 	margin: 0 0 3rem 0;
 	font-family: $primary-font;

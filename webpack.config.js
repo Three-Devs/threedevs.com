@@ -16,7 +16,7 @@ const mode = process.env.NODE_ENV || 'development';
 const isDevMode = mode !== "production";
 const configFile = toml.parse(fs.readFileSync("./config.toml", "utf-8"));
 const manifest = configFile.manifest;
-const cleaning = isDevMode ? ["static/*.*"] : ["public/*.*", "static/*.*"];
+const cleaning = (isDevMode) ? ["site/assets"] : ["public", "site/assets"];
 
 module.exports = (env, argv) => {
   return {
@@ -34,7 +34,7 @@ module.exports = (env, argv) => {
     output: {
       filename: !isDevMode ? "js/[name].bundle.js" : "js/[name].[hash].bundle.js",
       chunkFilename: !isDevMode ? "[name].bundle.js" : "[name].[hash].bundle.js",
-      path: path.resolve(__dirname, "static/assets")
+      path: path.resolve(__dirname, "site/assets")
     },
     devtool: "inline-source-map",
     devServer: {
@@ -120,6 +120,7 @@ module.exports = (env, argv) => {
       ]
     },
     plugins: [
+      new CleanWebpackPlugin(cleaning, {watch: true, beforeEmit: true}),
       new UglifyJsPlugin({
         sourceMap: true,
         cache: true,
@@ -173,7 +174,6 @@ module.exports = (env, argv) => {
           sizes: "1024x1024"
         }]
       }),*/
-      new CleanWebpackPlugin(cleaning, {watch: true, beforeEmit: true})
     ]
   };
 };
