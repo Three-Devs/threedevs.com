@@ -1,0 +1,19 @@
+.logo {
+		background-image: url("../../../site/assets/img/logo.png");
+	    height: 40px;
+	    width: 40px;
+	    @include background-size(cover);
+	    display: inline-block;
+	    margin-right: 10px;
+
+	}
+
+header {
+	background-color: $cream-brulee;
+	display: flex;
+    align-items: center;
+
+	h3 {
+		color: $brown-rust;
+	}
+}
