@@ -5,6 +5,9 @@ desktop.ini
 
 # NPM/Webpack built versions of files
 static/assets/
+site/assets/css/
+site/assets/img/
+site/assets/js/
 data/manifest.*
 
 # Temporary files
