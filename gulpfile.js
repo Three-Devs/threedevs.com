@@ -2,12 +2,12 @@ var gulp= require('gulp');
 var sass= require('gulp-sass');
 
 gulp.task('sass', function(){
-  return gulp.src('site/scss/styles.scss')
+  return gulp.src('src/assets/scss/styles.scss')
     .pipe(sass()) // Converts Sass to CSS with gulp-sass
-    .pipe(gulp.dest('site/css'))
+    .pipe(gulp.dest('site/assets/css'))
 });
 
 gulp.task('watch', function(){
-  gulp.watch('site/scss/**/*.scss', ['sass']); 
+  gulp.watch('src/assets/scss/**/*.scss', gulp.series('sass')); 
 })
 

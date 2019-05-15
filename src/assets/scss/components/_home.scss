@@ -1,0 +1,179 @@
+.home {
+
+	.button {
+		padding: 15px 65px;
+		transition: ease-in-out .2s;
+		display: inline-block;
+		text-decoration: none;
+		font-size:20px;
+		cursor:pointer;
+	}
+
+	a.button-hollow {
+		color: $white;
+		border:2px solid $white;
+
+		&:hover {
+			color:$brown-rust;
+			background-color: $white;
+		}
+	}
+
+	a.button-reverse {
+		color: $brown-rust;
+		border:2px solid $brown-rust;
+		text-decoration: none;
+
+		&:hover {
+			color:$white;
+			background-color: $brown-rust;
+		}
+	}
+
+	.hero-article {
+		color: $white;
+		position: relative;
+		border: 1px solid $white;
+		.hero-img {
+			height: 30em;
+			width:100%;
+		    background-image:url("../../assets/img/computer.jpg");
+		    @include background-size(cover);
+		    @include filter(blur(2px));
+		    margin:0;
+		}
+
+		.text {
+			position: absolute;
+			top:50%;
+			left:50%;
+			transform: translate(-50%, -50%);
+			text-align:center;
+			padding: 30px;
+
+
+			h3 {
+				font-size:40px;
+				min-width: 350px;
+				margin-bottom: 0px;
+			}
+
+			p {
+				margin-top:10px;
+				margin-bottom: 40px;
+			}
+		}	
+	}
+
+	.popular-articles {
+		margin-top:10px;
+		text-align:center;
+		.article-container {
+			text-align: left;
+
+			.quote {
+			    min-height: 400px;
+				@include flexbox();
+			    @include justify-content(center);
+			    @include align-items(center);
+			    padding: 30px;
+			    font-size: 30px;
+			    background-color: $cream-brulee;
+			    text-align: center;
+			    color: $brown-rust;
+			    font-weight: 600;
+
+			    @media all and (min-width: 1001px) {
+			    	max-width: 300px;
+			    }
+			}
+
+			&:nth-of-type(2) .article figure {
+				@include order(1);
+				@media all and (min-width:1001px) {
+					@include order(2);
+				}
+			}
+
+			&:nth-of-type(2) .article .desc {
+				@include order(2);
+				@media all and (min-width:1001px) {
+					@include order(1);
+				}
+			}
+
+			&:nth-of-type(1) .article figure, &:nth-of-type(3) .article figure {
+				@media all and (min-width:701px) {
+					@include order(1);
+				}
+			}
+
+			&:nth-of-type(1) .article .desc, &:nth-of-type(3) .article .desc {
+				@media all and (min-width:701px) {
+					@include order(2);
+				}
+			}
+
+			&:first-of-type .article:nth-of-type(2) figure {
+				background-image: url("../../assets/img/ocean.jpg");
+			}
+
+			&:nth-of-type(2) .article:first-of-type figure {
+				background-image: url("../../assets/img/plants.jpg");	
+			}
+
+			&:nth-of-type(2) .article:nth-of-type(3) figure {
+				background-image: url("../../assets/img/brooke-cagle-52216-unsplash.jpg");
+			}
+
+
+			.article {
+				@include flexbox();
+				@include flex-wrap(wrap);
+				@include flex-direction(column);
+				figure {
+					background-image: url("../../assets/img/mimi-thian-737736-unsplash.jpg");
+					@include background-size(cover);
+					background-position: 74% 50%;
+					margin:0;
+					min-height:400px;
+
+					@media all and (min-width:701px) {
+						@include flex-grow(1);
+					}
+
+
+				}
+
+				.desc {
+					padding: 45px;
+					a {
+						font-size: 15px;
+	    				padding: 15px 40px;
+					}
+
+					@media all and (min-width:701px) {
+						@include flex-grow(1);
+						@include flex-basis(0);
+					}
+
+				}
+
+				@media all and (min-width:701px) {
+					@include flex-direction(row);
+				}
+			}
+
+			@media all and (min-width:1001px) {
+		    	display: flex;
+			}
+		}
+
+		a.load-more {
+			text-align:center;
+			color:$brown-rust;
+			display:inline-block;
+			margin-top:20px;
+		}
+	}
+}

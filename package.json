@@ -22,6 +22,9 @@
   },
   "homepage": "https://threedevs.com",
   "devDependencies": {
+    "@hapi/boom": "^7.4.2",
+    "@hapi/cryptiles": "^4.2.0",
+    "@hapi/hoek": "^6.2.1",
     "anchora": "^1.0.1",
     "autoprefixer": "^8.6.0",
     "babel-core": "^6.26.3",
@@ -36,10 +39,12 @@
     "css-loader": "^0.28.11",
     "cssnano": "^3.10.0",
     "file-loader": "^1.1.11",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
     "katex": "^0.10.0-alpha",
     "lost": "^8.2.1",
     "mini-css-extract-plugin": "^0.4.4",
-    "node-sass": "^4.9.0",
+    "node-sass": "^4.12.0",
     "offline-plugin": "^5.0.5",
     "optimize-css-assets-webpack-plugin": "^4.0.2",
     "postcss-import": "^11.1.0",
@@ -48,6 +53,7 @@
     "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",
     "sugarss": "^1.0.1",
+    "tar": "^4.4.8",
     "toml": "^2.3.3",
     "uglifyjs-webpack-plugin": "^1.2.5",
     "url-loader": "^1.1.2",
@@ -57,11 +63,7 @@
     "webpack-manifest-plugin": "^2.0.3",
     "webpack-md5-hash": "0.0.6",
     "webpack-pwa-manifest": "^3.6.2",
-    "workbox-webpack-plugin": "^3.2.0",
-    "@hapi/boom": "^7.4.2",
-    "@hapi/cryptiles": "^4.2.0",
-    "@hapi/hoek": "^6.2.1",
-    "tar": "^4.4.8"
+    "workbox-webpack-plugin": "^3.2.0"
   },
   "dependencies": {}
 }

@@ -1,0 +1,401 @@
+/*random default mixins for now*/
+/* Standard layout and styling */
+/* Animations */
+/* Filters */
+/* Colors */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+.camilla-author-page .content-container {
+  margin-left: 40px;
+  margin-right: 40px; }
+  @media all and (min-width: 664px) {
+    .camilla-author-page .content-container {
+      margin-left: 115px;
+      margin-right: 115px; } }
+  .camilla-author-page .content-container .bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    @media all and (min-width: 986px) {
+      .camilla-author-page .content-container .bio {
+        flex-direction: row; } }
+    .camilla-author-page .content-container .bio figure.bio-pic {
+      background-image: url("../../assets/img/authors/camilla.jpg");
+      -o-background-size: cover;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+      background-position: 50% 0%;
+      background-repeat: no-repeat;
+      height: 385px;
+      width: 400px;
+      margin: 30px 0 0 0; }
+      @media all and (min-width: 986px) {
+        .camilla-author-page .content-container .bio figure.bio-pic {
+          height: auto;
+          width: 320px; } }
+    @media all and (min-width: 986px) {
+      .camilla-author-page .content-container .bio .text {
+        flex-basis: 0;
+        flex-grow: 1;
+        margin-left: 40px; } }
+    .camilla-author-page .content-container .bio .text h1 {
+      font-size: 40px;
+      font-weight: 700;
+      text-align: left;
+      line-height: 40px; }
+    .camilla-author-page .content-container .bio .text h2 {
+      color: #8c8c8c;
+      font-size: 18px;
+      font-weight: 300; }
+    .camilla-author-page .content-container .bio .text .socials {
+      display: flex;
+      justify-content: flex-start; }
+      .camilla-author-page .content-container .bio .text .socials figure {
+        height: 30px;
+        width: 30px;
+        -o-background-size: contain;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        background-size: contain;
+        margin-left: 0;
+        -webkit-transition: ease-in-out 0.2s;
+        transition: ease-in-out 0.2s;
+        cursor: pointer; }
+        .camilla-author-page .content-container .bio .text .socials figure:hover {
+          background-color: #FFE4A0; }
+      .camilla-author-page .content-container .bio .text .socials .linkedin figure {
+        background-image: url("../../assets/img/linkedin.png");
+        border-radius: 20px; }
+      .camilla-author-page .content-container .bio .text .socials .instagram figure {
+        background-image: url("../../assets/img/insta.png");
+        border-radius: 7px; }
+      .camilla-author-page .content-container .bio .text .socials .facebook figure {
+        background-image: url("../../assets/img/fb.png");
+        border-radius: 15px; }
+    .camilla-author-page .content-container .bio .text p {
+      text-align: left;
+      font-size: 17px;
+      color: #8c8c8c; }
+    .camilla-author-page .content-container .bio .text:after {
+      content: "";
+      display: inline-block;
+      border: 2px solid #af5340;
+      width: 100%; }
+  .camilla-author-page .content-container .articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px; }
+    @media all and (min-width: 694px) {
+      .camilla-author-page .content-container .articles {
+        justify-content: center;
+        flex-wrap: wrap; } }
+    .camilla-author-page .content-container .articles .card {
+      margin-bottom: 50px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      -webkit-transition: ease-in-out 0.1s;
+      transition: ease-in-out 0.1s;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+      padding: 20px;
+      max-width: 320px;
+      background-color: #ffffff; }
+      @media all and (min-width: 694px) {
+        .camilla-author-page .content-container .articles .card {
+          margin-right: 15px;
+          margin-left: 15px; } }
+      .camilla-author-page .content-container .articles .card:last-of-type {
+        margin-bottom: 0; }
+        @media all and (min-width: 694px) {
+          .camilla-author-page .content-container .articles .card:last-of-type {
+            margin-bottom: 50px; } }
+      .camilla-author-page .content-container .articles .card:hover {
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        cursor: pointer; }
+      .camilla-author-page .content-container .articles .card:nth-of-type(2) figure {
+        background-image: url("../../assets/img/mimi-thian-737736-unsplash.jpg"); }
+      .camilla-author-page .content-container .articles .card:hover > .date:after {
+        width: 100%;
+        -webkit-transition: ease-in 0.2s;
+        transition: ease-in 0.2s; }
+      .camilla-author-page .content-container .articles .card figure {
+        background-image: url("../../assets/img/women-in-tech.jpg");
+        -o-background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        background-position: 50% 50%;
+        height: 150px;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        margin: 0;
+        align-self: center; }
+      .camilla-author-page .content-container .articles .card p {
+        display: inline-block;
+        z-index: 5;
+        font-weight: 600;
+        font-size: 20px;
+        text-align: left;
+        margin: 10px 0 10px 0; }
+      .camilla-author-page .content-container .articles .card .date {
+        color: #8c8c8c;
+        font-size: 14px;
+        position: relative; }
+        .camilla-author-page .content-container .articles .card .date:before {
+          content: "";
+          display: block;
+          width: 100%;
+          background-color: #af5340;
+          height: 4px;
+          margin-bottom: 15px; }
+        .camilla-author-page .content-container .articles .card .date:after {
+          content: "";
+          display: block;
+          margin-bottom: 15px;
+          top: 0;
+          width: 0;
+          height: 4px;
+          background-color: #FFE4A0;
+          position: absolute;
+          -webkit-transition: ease-in 0.4s;
+          transition: ease-in 0.4s; }
+
+.logo {
+  background-image: url("../../../site/assets/img/logo.png");
+  height: 40px;
+  width: 40px;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  display: inline-block;
+  margin-right: 10px; }
+
+header {
+  background-color: #FFE4A0;
+  display: flex;
+  align-items: center; }
+  header h3 {
+    color: #af5340; }
+
+footer {
+  background-color: #FFE4A0;
+  color: #af5340;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 72px; }
+  footer figure {
+    margin: 0; }
+  footer h3 {
+    margin: 0; }
+
+.home .button {
+  padding: 15px 65px;
+  transition: ease-in-out .2s;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  cursor: pointer; }
+
+.home a.button-hollow {
+  color: #ffffff;
+  border: 2px solid #ffffff; }
+  .home a.button-hollow:hover {
+    color: #af5340;
+    background-color: #ffffff; }
+
+.home a.button-reverse {
+  color: #af5340;
+  border: 2px solid #af5340;
+  text-decoration: none; }
+  .home a.button-reverse:hover {
+    color: #ffffff;
+    background-color: #af5340; }
+
+.home .hero-article {
+  color: #ffffff;
+  position: relative;
+  border: 1px solid #ffffff; }
+  .home .hero-article .hero-img {
+    height: 30em;
+    width: 100%;
+    background-image: url("../../assets/img/computer.jpg");
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    filter: blur(2px);
+    margin: 0; }
+  .home .hero-article .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 30px; }
+    .home .hero-article .text h3 {
+      font-size: 40px;
+      min-width: 350px;
+      margin-bottom: 0px; }
+    .home .hero-article .text p {
+      margin-top: 10px;
+      margin-bottom: 40px; }
+
+.home .popular-articles {
+  margin-top: 10px;
+  text-align: center; }
+  .home .popular-articles .article-container {
+    text-align: left; }
+    .home .popular-articles .article-container .quote {
+      min-height: 400px;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      justify-content: center;
+      -ms-flex-pack: center;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      align-items: center;
+      padding: 30px;
+      font-size: 30px;
+      background-color: #FFE4A0;
+      text-align: center;
+      color: #af5340;
+      font-weight: 600; }
+      @media all and (min-width: 1001px) {
+        .home .popular-articles .article-container .quote {
+          max-width: 300px; } }
+    .home .popular-articles .article-container:nth-of-type(2) .article figure {
+      -webkit-box-ordinal-group: 1;
+      -moz-box-ordinal-group: 1;
+      -ms-flex-order: 1;
+      -webkit-order: 1;
+      order: 1; }
+      @media all and (min-width: 1001px) {
+        .home .popular-articles .article-container:nth-of-type(2) .article figure {
+          -webkit-box-ordinal-group: 2;
+          -moz-box-ordinal-group: 2;
+          -ms-flex-order: 2;
+          -webkit-order: 2;
+          order: 2; } }
+    .home .popular-articles .article-container:nth-of-type(2) .article .desc {
+      -webkit-box-ordinal-group: 2;
+      -moz-box-ordinal-group: 2;
+      -ms-flex-order: 2;
+      -webkit-order: 2;
+      order: 2; }
+      @media all and (min-width: 1001px) {
+        .home .popular-articles .article-container:nth-of-type(2) .article .desc {
+          -webkit-box-ordinal-group: 1;
+          -moz-box-ordinal-group: 1;
+          -ms-flex-order: 1;
+          -webkit-order: 1;
+          order: 1; } }
+    @media all and (min-width: 701px) {
+      .home .popular-articles .article-container:nth-of-type(1) .article figure, .home .popular-articles .article-container:nth-of-type(3) .article figure {
+        -webkit-box-ordinal-group: 1;
+        -moz-box-ordinal-group: 1;
+        -ms-flex-order: 1;
+        -webkit-order: 1;
+        order: 1; } }
+    @media all and (min-width: 701px) {
+      .home .popular-articles .article-container:nth-of-type(1) .article .desc, .home .popular-articles .article-container:nth-of-type(3) .article .desc {
+        -webkit-box-ordinal-group: 2;
+        -moz-box-ordinal-group: 2;
+        -ms-flex-order: 2;
+        -webkit-order: 2;
+        order: 2; } }
+    .home .popular-articles .article-container:first-of-type .article:nth-of-type(2) figure {
+      background-image: url("../../assets/img/ocean.jpg"); }
+    .home .popular-articles .article-container:nth-of-type(2) .article:first-of-type figure {
+      background-image: url("../../assets/img/plants.jpg"); }
+    .home .popular-articles .article-container:nth-of-type(2) .article:nth-of-type(3) figure {
+      background-image: url("../../assets/img/brooke-cagle-52216-unsplash.jpg"); }
+    .home .popular-articles .article-container .article {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      -moz-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .home .popular-articles .article-container .article figure {
+        background-image: url("../../assets/img/mimi-thian-737736-unsplash.jpg");
+        -o-background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        background-position: 74% 50%;
+        margin: 0;
+        min-height: 400px; }
+        @media all and (min-width: 701px) {
+          .home .popular-articles .article-container .article figure {
+            -webkit-flex-grow: 1;
+            -moz-flex-grow: 1;
+            -ms-flex-grow: 1;
+            flex-grow: 1; } }
+      .home .popular-articles .article-container .article .desc {
+        padding: 45px; }
+        .home .popular-articles .article-container .article .desc a {
+          font-size: 15px;
+          padding: 15px 40px; }
+        @media all and (min-width: 701px) {
+          .home .popular-articles .article-container .article .desc {
+            -webkit-flex-grow: 1;
+            -moz-flex-grow: 1;
+            -ms-flex-grow: 1;
+            flex-grow: 1;
+            -webkit-flex-basis: 0;
+            -moz-flex-basis: 0;
+            -ms-flex-basis: 0;
+            flex-basis: 0; } }
+      @media all and (min-width: 701px) {
+        .home .popular-articles .article-container .article {
+          -webkit-flex-direction: row;
+          -moz-flex-direction: row;
+          -ms-flex-direction: row;
+          flex-direction: row; } }
+    @media all and (min-width: 1001px) {
+      .home .popular-articles .article-container {
+        display: flex; } }
+  .home .popular-articles a.load-more {
+    text-align: center;
+    color: #af5340;
+    display: inline-block;
+    margin-top: 20px; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #444444; }
