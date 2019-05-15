@@ -16,7 +16,7 @@ const mode = process.env.NODE_ENV || 'development';
 const isDevMode = mode !== "production";
 const configFile = toml.parse(fs.readFileSync("./config.toml", "utf-8"));
 const manifest = configFile.manifest;
-const cleaning = (isDevMode) ? ["site/assets"] : ["public", "site/assets"];
+const cleaning = []; // Removed until we figure out better build processing. (isDevMode) ? ["site/assets"] : ["public", "site/assets"];
 
 module.exports = (env, argv) => {
   return {
