@@ -18,6 +18,8 @@ const configFile = toml.parse(fs.readFileSync("./config.toml", "utf-8"));
 const manifest = configFile.manifest;
 const cleaning = []; // Removed until we figure out better build processing. (isDevMode) ? ["site/assets"] : ["public", "site/assets"];
 
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+ 
 module.exports = (env, argv) => {
   return {
     mode: mode,
@@ -32,8 +34,8 @@ module.exports = (env, argv) => {
     },
     entry: { main: './src/assets/js/script.js' },
     output: {
-      filename: !isDevMode ? "js/[name].bundle.js" : "js/[name].[hash].bundle.js",
-      chunkFilename: !isDevMode ? "[name].bundle.js" : "[name].[hash].bundle.js",
+      filename: "js/[name].bundle.js", // Saved for later? !isDevMode ? "js/[name].bundle.js" : "js/[name].[hash].bundle.js",
+      chunkFilename: "[name].bundle.js", // Also saved for later? !isDevMode ? "[name].bundle.js" : "[name].[hash].bundle.js",
       path: path.resolve(__dirname, "site/assets")
     },
     devtool: "inline-source-map",
@@ -131,8 +133,8 @@ module.exports = (env, argv) => {
         }
       }),
       new MiniCssExtractPlugin({
-        filename: !isDevMode ? "[name].bundle.css" : "[name].[contenthash].bundle.css",
-        chunkFilename: !isDevMode ? "[id].bundle.css" : "[id].[contenthash].bundle.css"
+        filename: "[name].bundle.css", // Saved for later? !isDevMode ? "[name].bundle.css" : "[name].[contenthash].bundle.css",
+        chunkFilename: "[id].bundle.css" // Saved for later? !isDevMode ? "[id].bundle.css" : "[id].[contenthash].bundle.css"
       }),
       new WebpackMd5Hash(),
       new ManifestPlugin({
@@ -174,6 +176,13 @@ module.exports = (env, argv) => {
           sizes: "1024x1024"
         }]
       }),*/
+      new BrowserSyncPlugin({
+        // browse to http://localhost:3000/ during development,
+        // ./public directory is being served
+        host: 'localhost',
+        port: 80,
+        server: { baseDir: ['site'] }
+      })
     ]
   };
 };
