@@ -6,7 +6,7 @@
   "scripts": {
     "postinstall": "echo \"No post-install scripts currently configured.\"",
     "watch": "concurrently --kill-others \"webpack --watch --watch-poll\"",
-    "dev": "concurrently --prefix '{time}-{pid}' 'npm run watch' --kill-others --kill-others-on-fail",
+    "dev": "concurrently --prefix '{time}-{pid}' \"npm run watch\" --kill-others --kill-others-on-fail",
     "prod": "echo 'Not yet implemented'",
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -32,6 +32,8 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-register": "^6.26.0",
+    "browser-sync": "^2.26.5",
+    "browser-sync-webpack-plugin": "^2.2.2",
     "clean-webpack-plugin": "^0.1.19",
     "compression-webpack-plugin": "^1.1.11",
     "concurrently": "^3.5.1",
