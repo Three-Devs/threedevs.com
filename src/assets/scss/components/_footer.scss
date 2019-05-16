@@ -1,10 +1,11 @@
 footer {
-	background-color: $cream-brulee;
+	background-color: $white;
 	color: $brown-rust;
 	display:flex;
 	align-items:center;
 	justify-content: center;
 	height:72px;
+	 @include box-shadow(0px -4px 5px 0px rgba(57, 63, 72, 0.3));
 
 	figure {
 		margin:0;

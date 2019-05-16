@@ -5,18 +5,166 @@
 @import "components/header.scss";
 @import "components/footer.scss";
 @import "components/home.scss";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
 
 //@import "../../../node_modules/foundation-sites/scss/settings/_settings.scss";
 //@import "../../../node_modules/foundation-sites/scss/foundation.scss";
 //@import "../../../node_modules/foundation-sites/dist/css/foundation.min.css";
 
+
+//resetting styles 
+
+input,
+label,
+select,
+button,
+textarea
+{
+	margin:0;
+	border:0;
+	padding:0;
+	display:inline-block;
+	vertical-align:middle;
+	white-space:normal;
+	background-color:$white;
+	line-height:1;
+	font-family:inherit;
+	font-size:inherit;
+}
+
+input:focus
+{
+	outline:0;
+}
+
+input,
+textarea
+{
+	@include box-sizing(content-box);
+	font-size: 14px;
+    padding-left: 10px;
+}
+
+input {
+	height:35px;
+}
+
+input[type=search]
+{
+	-webkit-appearance:textfield;
+	-webkit-box-sizing:content-box;
+}
+
+::-webkit-search-decoration
+{
+	display:none;
+}
+
+button,
+input[type="reset"],
+input[type="button"],
+input[type="submit"]
+{
+	/* Fix IE7 display bug */
+	overflow:visible;
+	width:auto;
+}
+
+/* IE8 and FF freak out if this rule is within another selector */
+::-webkit-file-upload-button
+{	
+	padding:0;
+	border:0;
+	background:none;
+}
+
+textarea 
+{
+	/* Move the label to the top */
+	vertical-align:top;
+	
+	/* Turn off scroll bars in IE unless needed */
+	overflow:auto;
+	padding-top: 10px;
+	outline:0;
+}
+
+a {
+	cursor:pointer;
+}
+
 * {
 	@include box-sizing(border-box);
 }
 
+
+//overall styles
+
 body {
 	margin:0;
 	padding:0;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	color: $tundora;
 }
+
+h3 {
+	font-size:24px;
+}
+
+h2 {
+	font-size:35px;
+	text-transform: uppercase;
+}
+
+//buttons
+
+
+.button {
+		padding: 10px 50px;
+		transition: ease-in-out .2s;
+		display: inline-block;
+		text-decoration: none;
+		font-size:15px;
+		cursor:pointer;
+		text-align:center;
+	}
+
+	a.button-hollow {
+		color: $white;
+		border:2px solid $white;
+
+		&:hover {
+			color:$brown-rust;
+			background-color: $white;
+		}
+	}
+
+	a.button-reverse {
+		color: $brown-rust;
+		border:2px solid $brown-rust;
+
+		&:hover {
+			color:$white;
+			background-color: $brown-rust;
+		}
+	}
+
+	a.button-filled {
+		background-color:$brown-rust;
+		color:$white;
+
+		&:hover {
+			color:$white;
+			background-color: $darkened-rust;
+		}
+	}
+
+
+
+
+
+
+
+
+
+
