@@ -76,29 +76,31 @@ module.exports = (env, argv) => {
         },
         {
           test: /\.s?[ac]ss$/,
-          use: [{
-            loader: MiniCssExtractPlugin.loader,
-          },
-          {
-            loader: "css-loader",
-            options: {
-              importLoaders: 2,
-              sourceMap: true,
-              minimize: true
+          use: [
+            {
+              loader: MiniCssExtractPlugin.loader
+            },
+            {
+              loader: "css-loader",
+              options: {
+                importLoaders: 2,
+                sourceMap: true,
+                minimize: true
+              }
+            },
+            {
+              loader: "postcss-loader",
+              options: {
+                sourceMap: true
+              }
+            },
+            {
+              loader: "sass-loader",
+              options: {
+                sourceMap: true,
+                outputPath: path.resolve(__dirname, "public/assets/css")
+              }
             }
-          },
-          {
-            loader: "postcss-loader",
-            options: {
-              sourceMap: true
-            }
-          },
-          {
-            loader: "sass-loader",
-            options: {
-              sourceMap: true
-            }
-          }
           ]
         },
         {
@@ -155,21 +157,21 @@ module.exports = (env, argv) => {
         }
       }),
       new MiniCssExtractPlugin({
-        filename: "[name].bundle.css", // Saved for later? !isDevMode ? "[name].bundle.css" : "[name].[contenthash].bundle.css",
-        chunkFilename: "[id].bundle.css" // Saved for later? !isDevMode ? "[id].bundle.css" : "[id].[contenthash].bundle.css"
+        filename: "css/[name].bundle.css", // Saved for later? !isDevMode ? "[name].bundle.css" : "[name].[contenthash].bundle.css",
+        chunkFilename: "css/[id].bundle.css" // Saved for later? !isDevMode ? "[id].bundle.css" : "[id].[contenthash].bundle.css"
       }),
       new WebpackMd5Hash(),
       new ManifestPlugin({
         fileName: "../../data/manifest.json",
       }),
-      new CompressionPlugin({
+      /*new CompressionPlugin({
         test: /\.(js|css)/,
         algorithm: "gzip",
         threshold: 0,
         minRatio: 0.8,
         cache: true,
         asset: "[path].gz[query]"
-      }),
+      }),*/
       new CopyWebpackPlugin([{
         from: "./src/assets/img/",
         to: "img/"
