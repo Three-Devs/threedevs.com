@@ -16,7 +16,7 @@ const mode = process.env.NODE_ENV || 'development';
 const isDevMode = mode !== "production";
 const configFile = toml.parse(fs.readFileSync("./config.toml", "utf-8"));
 const manifest = configFile.manifest;
-const cleaning = []; // Removed until we figure out better build processing. (isDevMode) ? ["site/assets"] : ["public", "site/assets"];
+const cleaning = []; // Removed until we figure out better build processing. (isDevMode) ? ["public/assets"] : ["public", "public/assets"];
 
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
  
@@ -36,14 +36,14 @@ module.exports = (env, argv) => {
     output: {
       filename: "js/[name].bundle.js", // Saved for later? !isDevMode ? "js/[name].bundle.js" : "js/[name].[hash].bundle.js",
       chunkFilename: "[name].bundle.js", // Also saved for later? !isDevMode ? "[name].bundle.js" : "[name].[hash].bundle.js",
-      path: path.resolve(__dirname, "site/assets")
+      path: path.resolve(__dirname, "public/assets")
     },
     devtool: "inline-source-map",
-    devServer: {
-      contentBase: path.join(__dirname, "site"),
+    /*devServer: {
+      contentBase: path.join(__dirname, "public"),
       compress: true,
       port: 3000
-    },
+    },*/
     module: {
       rules: [
         {
@@ -118,6 +118,22 @@ module.exports = (env, argv) => {
               }
             }
           ]
+        },
+        /*{
+          test: /\.html$/,
+          use: [ {
+            loader: 'html-loader',
+            options: {
+              minimize: true,
+              removeComments: true,
+              collapseWhitespace: true,
+              outputPath: './',
+            }
+          }],
+        },*/
+        {
+          test: /\.html$/,
+          use: ['file-loader?name=[name].[ext]', 'extract-loader', 'html-loader'],
         }
       ]
     },
@@ -152,6 +168,11 @@ module.exports = (env, argv) => {
         from: "./src/assets/img/",
         to: "img/"
       }]),
+      new CopyWebpackPlugin([{
+        context: './src/',
+        from: "**/*.html",
+        to: "../",
+      }]),
       /*new WebpackPwaManifest({
         filename: "manifest.json",
         orientation: "portrait",
@@ -160,7 +181,7 @@ module.exports = (env, argv) => {
         inject: true,
         fingerprints: true,
         ios: true,
-        publicPath: '.site',
+        publicPath: './public',
         includeDirectory: true,
         theme_color: manifest.theme_color,
         name: manifest.name,
@@ -181,7 +202,7 @@ module.exports = (env, argv) => {
         // ./public directory is being served
         host: 'localhost',
         port: 80,
-        server: { baseDir: ['site'] }
+        server: { baseDir: ['public'] }
       })
     ]
   };

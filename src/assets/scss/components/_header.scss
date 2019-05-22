@@ -15,7 +15,7 @@ header {
     	@include align-items(center);
 
     	.logo {
-			background-image: url("../../../site/assets/img/logo.png");
+			background-image: url("../../assets/img/logo.png");
 		    height: 40px;
 		    width: 40px;
 		    @include background-size(cover);
