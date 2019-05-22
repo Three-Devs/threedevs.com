@@ -39,11 +39,11 @@ module.exports = (env, argv) => {
       path: path.resolve(__dirname, "public/assets")
     },
     devtool: "inline-source-map",
-    devServer: {
+    /*devServer: {
       contentBase: path.join(__dirname, "public"),
       compress: true,
       port: 3000
-    },
+    },*/
     module: {
       rules: [
         {
@@ -118,6 +118,22 @@ module.exports = (env, argv) => {
               }
             }
           ]
+        },
+        /*{
+          test: /\.html$/,
+          use: [ {
+            loader: 'html-loader',
+            options: {
+              minimize: true,
+              removeComments: true,
+              collapseWhitespace: true,
+              outputPath: './',
+            }
+          }],
+        },*/
+        {
+          test: /\.html$/,
+          use: ['file-loader?name=[name].[ext]', 'extract-loader', 'html-loader'],
         }
       ]
     },
@@ -151,6 +167,11 @@ module.exports = (env, argv) => {
       new CopyWebpackPlugin([{
         from: "./src/assets/img/",
         to: "img/"
+      }]),
+      new CopyWebpackPlugin([{
+        context: './src/',
+        from: "**/*.html",
+        to: "../",
       }]),
       /*new WebpackPwaManifest({
         filename: "manifest.json",
