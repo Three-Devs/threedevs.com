@@ -2,6 +2,7 @@ const path = require("path");
 const fs = require("fs");
 const toml = require("toml");
 
+const MakeDirWebpackPlugin = require('make-dir-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
@@ -138,6 +139,11 @@ module.exports = (env, argv) => {
       ]
     },
     plugins: [
+      new MakeDirWebpackPlugin({
+        dirs: [
+          { path: './public' },
+        ]
+      }),
       new CleanWebpackPlugin(cleaning, {watch: true, beforeEmit: true}),
       new UglifyJsPlugin({
         sourceMap: true,
