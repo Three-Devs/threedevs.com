@@ -11,11 +11,7 @@ import "../scss/styles.scss";
 // Scripts.
 import "../js/highlight.pack.js";
 // HTML
-//import "../../index.html";
-//import "../../coming-soon.html";
 //require("html-loader?interpolate!../../index.html");
-//require("html-loader?interpolate!../../coming-soon.html");
-//require("html-loader?interpolate!../../404.html");
 require.context("../", true, /\.html$/);
 
 console.log("hello, world");

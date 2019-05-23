@@ -13,15 +13,15 @@
 		}
 
 		figure.insta {
-			background-image: url("../../assets/img/insta.png");
+			background-image: url("/assets/img/insta.png");
 		}
 
 		figure.fb {
-			background-image: url("../../assets/img/fb.png");
+			background-image: url("/assets/img/fb.png");
 		}
 
 		figure.linkedin {
-			background-image: url("../../assets/img/linkedin.png");
+			background-image: url("/assets/img/linkedin.png");
 		}
 	}
 
@@ -32,7 +32,7 @@
 		.hero-img {
 			height: 30em;
 			width:100%;
-		    background-image:url("../../assets/img/background-2.jpg");
+		    background-image:url('/assets/img/background-2.jpg');
 		    @include background-size(cover);
 		    background-position: 50% 50%;
 		    margin:0;
@@ -181,15 +181,15 @@
 			}
 
 			&:first-of-type .article:nth-of-type(2) figure {
-				background-image: url("../../assets/img/ocean.jpg");
+				background-image: url("/assets/img/ocean.jpg");
 			}
 
 			&:nth-of-type(2) .article:first-of-type figure {
-				background-image: url("../../assets/img/plants.jpg");	
+				background-image: url("/assets/img/plants.jpg");	
 			}
 
 			&:nth-of-type(2) .article:nth-of-type(3) figure {
-				background-image: url("../../assets/img/brooke-cagle-52216-unsplash.jpg");
+				background-image: url("/assets/img/brooke-cagle-52216-unsplash.jpg");
 			}
 
 
@@ -198,7 +198,7 @@
 				@include flex-wrap(wrap);
 				@include flex-direction(column);
 				figure {
-					background-image: url("../../assets/img/mimi-thian-737736-unsplash.jpg");
+					background-image: url("/assets/img/mimi-thian-737736-unsplash.jpg");
 					@include background-size(cover);
 					background-position: 74% 50%;
 					margin:0;
@@ -292,30 +292,30 @@
 			}
 
 			&.luke > figure {
-				background-image: url("../../assets/img/authors/luke-rebarchik.png");
+				background-image: url("/assets/img/authors/luke-rebarchik.png");
 			}
 
 			&.tyler > figure {
-				background-image: url("../../assets/img/authors/tyler.png");
+				background-image: url("/assets/img/authors/tyler.png");
 			}
 
 			&.camilla > figure {
-				background-image: url("../../assets/img/authors/camilla.jpg");
+				background-image: url("/assets/img/authors/camilla.jpg");
 				background-position: 50% 0%;
 			}
 
 			.socials {
 
 				figure.insta {
-					background-image: url("../../assets/img/insta-white.png");
+					background-image: url("/assets/img/insta-white.png");
 				}
 
 				figure.fb {
-					background-image: url("../../assets/img/fb-white.png");
+					background-image: url("/assets/img/fb-white.png");
 				}
 
 				figure.linkedin {
-					background-image: url("../../assets/img/linkedin-white.png");
+					background-image: url("/assets/img/linkedin-white.png");
 				}
 
 			}		

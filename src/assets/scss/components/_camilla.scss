@@ -18,7 +18,7 @@
 		    }
 
 		    figure.bio-pic {
-				background-image: url("../../assets/img/authors/camilla.jpg");
+				background-image: url("/assets/img/authors/camilla.jpg");
 				@include background-size(cover);
 				background-position: 50% 0%;
 				background-repeat:no-repeat;
@@ -72,17 +72,17 @@
 					}
 
 					.linkedin figure {
-						background-image: url("../../assets/img/linkedin.png");
+						background-image: url("/assets/img/linkedin.png");
 						border-radius: 20px;
 					}
 
 					.instagram figure {
-						background-image: url("../../assets/img/insta.png");
+						background-image: url("/assets/img/insta.png");
 						border-radius: 7px;
 					}
 
 					.facebook figure {
-						background-image: url("../../assets/img/fb.png");
+						background-image: url("/assets/img/fb.png");
 						border-radius: 15px;
 					}
 				}
@@ -151,7 +151,7 @@
 
 
 				&:nth-of-type(2) figure {
-					background-image:url("../../assets/img/mimi-thian-737736-unsplash.jpg");
+					background-image:url("/assets/img/mimi-thian-737736-unsplash.jpg");
 				}
 
 				&:hover > .date:after {
@@ -160,7 +160,7 @@
 				}
 
 				figure {
-					background-image:url("../../assets/img/women-in-tech.jpg");
+					background-image:url("/assets/img/women-in-tech.jpg");
 					@include background-size(cover);
 					background-position: 50% 50%;
 					height:150px;
