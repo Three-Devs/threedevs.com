@@ -24,7 +24,7 @@
   "devDependencies": {
     "@hapi/boom": "^7.4.2",
     "@hapi/cryptiles": "^4.2.0",
-    "@hapi/hoek": "^6.2.1",
+    "@hapi/hoek": "^9.0.4",
     "anchora": "^1.0.1",
     "autoprefixer": "^8.6.0",
     "babel-core": "^6.26.3",
